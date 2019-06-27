@@ -136,6 +136,8 @@
 </ul>
 <p>同时修改index页面中script的src属性为<code>&lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;</code></p>
 </li>
+<li><p>注意：由于最新的webpack和webpack-dev-server打包报错，推荐使用<a href="mailto:webpack@3.12.0" target="_blank" rel="noopener">webpack@3.12.0</a>和webpack-dev-server@2.9.3</p>
+</li>
 </ol>
 <h2 id="使用html-webpack-plugin插件配置启动页面"><a href="#使用html-webpack-plugin插件配置启动页面" class="headerlink" title="使用html-webpack-plugin插件配置启动页面"></a>使用<code>html-webpack-plugin</code>插件配置启动页面</h2><p>由于使用<code>--contentBase</code>指令的过程比较繁琐，需要指定启动的目录，同时还需要修改index.html中script标签的src属性，所以推荐大家使用<code>html-webpack-plugin</code>插件配置启动页面.</p>
 <ol>
