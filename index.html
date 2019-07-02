@@ -297,9 +297,7 @@
 
 </li>
 </ol>
-<blockquote>
 <p>注意</p>
-</blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 注意：当启用 CSS 模块化之后，这里所有的类名，都是私有的，</span></span><br><span class="line"><span class="comment">	如果想要把类名设置成全局的一个类，可以把这个类名，用 :global() 给包裹起来 */</span></span><br><span class="line"><span class="comment">/* 当使用 :global() 设置了全局的 类样式之后，这个类不会被重命名 */</span></span><br><span class="line"><span class="comment">/* 只有私有的类才会被重命名 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-pseudo">:global(.title)</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 

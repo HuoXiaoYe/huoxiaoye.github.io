@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="欢迎来到霍小叶的个人博客">
 <meta property="og:description" content="写在前面 使用Webpack有一段时间了，但是感觉之前学的用的都比较零散， 所以在这里整理一下Webpack的使用知识，从一开始的入门到进阶。你知道如何使用webpack打包项目吗？你知道如何在React中使用模块化的css样式吗？ 看文本文章后，嘿嘿嘿…. 什么是webpack?webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；当我们在项目中导入了过多的">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-07-02T06:58:32.879Z">
+<meta property="og:updated_time" content="2019-07-02T07:00:52.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack-base-study">
 <meta name="twitter:description" content="写在前面 使用Webpack有一段时间了，但是感觉之前学的用的都比较零散， 所以在这里整理一下Webpack的使用知识，从一开始的入门到进阶。你知道如何使用webpack打包项目吗？你知道如何在React中使用模块化的css样式吗？ 看文本文章后，嘿嘿嘿…. 什么是webpack?webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来的一个前端工具；当我们在项目中导入了过多的">
@@ -242,9 +242,7 @@
 
 </li>
 </ol>
-<blockquote>
 <p>注意</p>
-</blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 注意：当启用 CSS 模块化之后，这里所有的类名，都是私有的，</span></span><br><span class="line"><span class="comment">	如果想要把类名设置成全局的一个类，可以把这个类名，用 :global() 给包裹起来 */</span></span><br><span class="line"><span class="comment">/* 当使用 :global() 设置了全局的 类样式之后，这个类不会被重命名 */</span></span><br><span class="line"><span class="comment">/* 只有私有的类才会被重命名 */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-pseudo">:global(.title)</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
