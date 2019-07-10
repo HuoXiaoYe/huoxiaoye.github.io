@@ -107,7 +107,20 @@
 
 </li>
 </ol>
-<h4 id="第三大属性–props"><a href="#第三大属性–props" class="headerlink" title="第三大属性–props"></a>第三大属性–props</h4><h4 id="state和props的区别"><a href="#state和props的区别" class="headerlink" title="state和props的区别"></a><strong>state和props的区别</strong></h4><ul>
+<h4 id="第三大属性–props"><a href="#第三大属性–props" class="headerlink" title="第三大属性–props"></a>第三大属性–props</h4><ul>
+<li>每个组件对象都会有props(properties的简写)属性</li>
+<li>组件标签的所有属性都保存在props中</li>
+<li>内部读取某个属性值: this.props.propertyName</li>
+<li>作用: 通过标签属性从组件外向组件内传递数据(只读)</li>
+<li>可以对props中的属性值进行类型限制和必要性限制</li>
+<li>使用示例<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Person &#123;...person&#125;/&gt; <span class="comment">//父组件 &#123;...person&#125; 时ES6中的属性扩散</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入对props属性值限制的包</span></span><br><span class="line"><span class="keyword">import</span> ReactTypes <span class="keyword">from</span> <span class="string">'prop-types'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">		<span class="keyword">super</span>(props)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">static</span> defaultProps = &#123; <span class="comment">// 默认的属性值</span></span><br><span class="line">	  name: <span class="string">'lisi'</span>,</span><br><span class="line">	  addr: <span class="string">'beijing'</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">static</span> propTypes = &#123; <span class="comment">// 对props的属性值进行限制</span></span><br><span class="line">	  name: ReactTypes.string,</span><br><span class="line">	  addr: ReactTypes.string</span><br><span class="line">	&#125;</span><br><span class="line">	render()&#123;</span><br><span class="line">		<span class="keyword">return</span>(</span><br><span class="line">			&lt;div&gt;</span><br><span class="line">				&#123;<span class="keyword">this</span>.props.name&#125; ---- &#123;<span class="keyword">this</span>.props.addr&#125; <span class="comment">// 通过this.props.XXXX来使用</span></span><br><span class="line">			&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">		</span></span><br><span class="line"><span class="regexp">		)</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>** props还可以进行路由的编程式跳转和获取相匹配路径的值，请见之后的blog， react-router 的学习 **</p>
+<h4 id="state和props的区别"><a href="#state和props的区别" class="headerlink" title="state和props的区别"></a><strong>state和props的区别</strong></h4><ul>
 <li>State是可变的，是一组用于反映组件UI变化的状态集合；</li>
 <li>Props对于使用它的组件来说，是只读的，要想修改Props，只能通过该组件的父组件修改。</li>
 <li>在组件状态上移的场景中，父组件正是通过子组件的Props, 传递给子组件其所需要的状态。</li>
