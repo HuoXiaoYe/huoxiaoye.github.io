@@ -7,17 +7,17 @@
   
   <title>React的props,state,ref三大属性详解 | 欢迎来到霍小叶的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="React的三大属性详解">
+  <meta name="description" content="React的三大属性详解(ref,state,props)第一大属性–ref 组件内的标签都可以定义ref属性来标识自己  在组件中可以通过this.refs.refName来得到对应的真实DOM对象  作用: 用于操作指定的ref属性的dom元素对象(表单标签居多)  12&amp;lt;input ref=&apos;username&apos; /&amp;gt;this.refs.username //返回input对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React的props,state,ref三大属性详解">
 <meta property="og:url" content="http://yoursite.com/2019/07/10/React的props-state-ref三大属性详解/index.html">
 <meta property="og:site_name" content="欢迎来到霍小叶的个人博客">
-<meta property="og:description" content="React的三大属性详解">
+<meta property="og:description" content="React的三大属性详解(ref,state,props)第一大属性–ref 组件内的标签都可以定义ref属性来标识自己  在组件中可以通过this.refs.refName来得到对应的真实DOM对象  作用: 用于操作指定的ref属性的dom元素对象(表单标签居多)  12&amp;lt;input ref=&apos;username&apos; /&amp;gt;this.refs.username //返回input对象">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-07-10T13:39:17.701Z">
+<meta property="og:updated_time" content="2019-07-10T13:53:45.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React的props,state,ref三大属性详解">
-<meta name="twitter:description" content="React的三大属性详解">
+<meta name="twitter:description" content="React的三大属性详解(ref,state,props)第一大属性–ref 组件内的标签都可以定义ref属性来标识自己  在组件中可以通过this.refs.refName来得到对应的真实DOM对象  作用: 用于操作指定的ref属性的dom元素对象(表单标签居多)  12&amp;lt;input ref=&apos;username&apos; /&amp;gt;this.refs.username //返回input对象">
   
     <link rel="alternate" href="/atom.xml" title="欢迎来到霍小叶的个人博客" type="application/atom+xml">
   
@@ -86,7 +86,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="React的三大属性详解"><a href="#React的三大属性详解" class="headerlink" title="React的三大属性详解"></a>React的三大属性详解</h2>
+        <h2 id="React的三大属性详解-ref-state-props"><a href="#React的三大属性详解-ref-state-props" class="headerlink" title="React的三大属性详解(ref,state,props)"></a>React的三大属性详解(ref,state,props)</h2><h3 id="第一大属性–ref"><a href="#第一大属性–ref" class="headerlink" title="第一大属性–ref"></a>第一大属性–ref</h3><ol>
+<li><p>组件内的标签都可以定义ref属性来标识自己</p>
+</li>
+<li><p>在组件中可以通过this.refs.refName来得到对应的真实DOM对象</p>
+</li>
+<li><p>作用: 用于操作指定的ref属性的dom元素对象(表单标签居多)</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input ref=<span class="string">'username'</span> /&gt;</span><br><span class="line"><span class="keyword">this</span>.refs.username <span class="comment">//返回input对象</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>使用示例<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">      <span class="keyword">constructor</span> (props) &#123;</span><br><span class="line">       <span class="keyword">super</span>(props);</span><br><span class="line">      &#125;</span><br><span class="line">      showMsg = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// 当点击 按钮 时，触发该事件 </span></span><br><span class="line">        <span class="keyword">const</span> input = <span class="keyword">this</span>.refs.msg;</span><br><span class="line">        alert(input.value);</span><br><span class="line">      &#125;</span><br><span class="line">      blurMethod = <span class="function">(<span class="params">event</span>)=&gt;</span> &#123; <span class="comment">//当失去焦点时，触发该事件，event.target的使用</span></span><br><span class="line">        <span class="keyword">const</span> input = event.target;</span><br><span class="line">        alert(input.value);</span><br><span class="line">      &#125;</span><br><span class="line">      render () &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">          &lt;div&gt;</span><br><span class="line">            &lt;input type=<span class="string">"text"</span> ref=<span class="string">"msg"</span>/&gt;</span><br><span class="line">            &lt;button onClick=&#123;<span class="keyword">this</span>.showMsg&#125;&gt;alert数据&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">            &lt;input type="text" placeholder="失去焦点alert数据" onBlur=&#123;this.blurMethod&#125;/</span>&gt;</span><br><span class="line">          &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        );</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="第二大属性–state"><a href="#第二大属性–state" class="headerlink" title="第二大属性–state"></a>第二大属性–state</h3><h3 id="第三大属性–props"><a href="#第三大属性–props" class="headerlink" title="第三大属性–props"></a>第三大属性–props</h3>
       
     </div>
     <footer class="article-footer">
