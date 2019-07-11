@@ -178,19 +178,19 @@
 </ul>
 <ol>
 <li>组件创建阶段的生命周期函数<ul>
-<li>componentWillMount() <ul>
+<li>componentWillMount(){}<ul>
 <li>组件将要挂载的时候执行的函数，组件尚未挂载到页面中。</li>
 <li>虚拟DOM也没有开始创建。</li>
 <li>这个生命周期函数相当于 vue 中的 created(){}</li>
 </ul>
 </li>
-<li>render()<ul>
+<li>render(){}<ul>
 <li>在 return 之前，虚拟DOM还没有开始创建，页面上也是空的，此时无法拿到页面中的元素。</li>
 <li>不要在 render 中使用 this.setState,这样做会导致会死循环。 </li>
 <li>当 return 执行完毕后， 虚拟DOM创建好了，但是，还没有挂载到真正的页面中</li>
 </ul>
 </li>
-<li>componentDidMount()<ul>
+<li>componentDidMount(){}<ul>
 <li>当组件挂载到页面上之后，会执行此生命周期函数。</li>
 <li>此时，我们可以操作页面中的DOM元素了，这是我们可以最早操作DOM元素的生命周期函数。</li>
 <li>当组件执行完 componentDidMount 函数后，就进入到了 运行中的状态，所以，componentDidMount 是创建阶段的最后一个函数</li>
@@ -199,7 +199,10 @@
 </li>
 </ul>
 </li>
-<li>组件运行阶段的生命周期函数</li>
+<li>组件运行阶段的生命周期函数<ul>
+<li>shouldComponentUpdate(){}</li>
+</ul>
+</li>
 <li>组件销毁阶段的生命周期函数</li>
 </ol>
 
