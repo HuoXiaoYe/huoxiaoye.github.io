@@ -16,7 +16,7 @@
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="http://yoursite.com/2019/07/10/React的生命周期/images/React%E4%B8%AD%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/10/React的生命周期/images/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%A1%A8%E6%A0%BC.png">
-<meta property="og:updated_time" content="2019-07-11T13:40:00.350Z">
+<meta property="og:updated_time" content="2019-07-11T13:41:44.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React的生命周期">
 <meta name="twitter:description" content="React的生命周期函数生命周期函数是什么 概念：组件从创建、到运行、再到销毁，这期间总是伴随着各种各样的事件，那么，这些事件统称为 组件的生命周期函数。 组件生命周期分为三部分： 组件创建阶段：组件在创建时执行一次。 组件运行阶段：组件根据属性props和状态state的改变，有选择性的触发0次或多次。 组件销毁阶段：组件在销毁时时执行一次。React生命周期的回调函数执行顺序     组件创建">
@@ -122,14 +122,20 @@
 </ul>
 </li>
 <li>组件运行阶段的生命周期函数<ul>
-<li>componentWillReceiveProps(nextProps)</li>
-<li>shouldComponentUpdate(nextProps, nextState)</li>
-<li>componentWillUpdate(nextProps, nextState)</li>
-<li>render()</li>
-<li>componentDidUpdate(prevProps, prevState)</li>
+<li>componentWillReceiveProps(nextProps){}</li>
+<li>shouldComponentUpdate(nextProps, nextState){}</li>
+<li>componentWillUpdate(nextProps, nextState){}</li>
+<li>render(){}</li>
+<li>componentDidUpdate(prevProps, prevState){}</li>
 </ul>
 </li>
-<li>组件销毁阶段的生命周期函数</li>
+<li>组件销毁阶段的生命周期函数<ul>
+<li>compoentWillUnmount(){}<ul>
+<li>组建将要被卸载。此时，组建还是可用状态。 </li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
 
       
