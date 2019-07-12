@@ -62,6 +62,42 @@
       <div class="outer">
         <section id="main">
   
+    <article id="port-React函数传参的三种方式" class="article article-type-port" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/12/React函数传参的三种方式/" class="article-date">
+  <time datetime="2019-07-12T11:18:00.000Z" itemprop="datePublished">2019-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/12/React函数传参的三种方式/">&#39;React函数传参的三种方式&#39;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/12/React函数传参的三种方式/" data-id="cjy00cfiw0000d0urw4ryffd9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-React的props-state-ref三大属性详解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/10/React的props-state-ref三大属性详解/" class="article-date">
@@ -119,7 +155,7 @@
 <li><p>可以对props中的属性值进行类型限制和必要性限制</p>
 </li>
 <li><p>使用示例</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Person &#123;...person&#125;/&gt; <span class="comment">//父组件 &#123;...person&#125; 时ES6中的属性扩散</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Person &#123;...person&#125;/&gt; <span class="comment">//父组件 &#123;...person&#125; 是ES6中的属性扩散</span></span><br></pre></td></tr></table></figure>
 
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入对props属性值限制的包</span></span><br><span class="line"><span class="keyword">import</span> ReactTypes <span class="keyword">from</span> <span class="string">'prop-types'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">		<span class="keyword">super</span>(props)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">static</span> defaultProps = &#123; <span class="comment">// 默认的属性值</span></span><br><span class="line">	  name: <span class="string">'lisi'</span>,</span><br><span class="line">	  addr: <span class="string">'beijing'</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">static</span> propTypes = &#123; <span class="comment">// 对props的属性值进行限制</span></span><br><span class="line">	  name: ReactTypes.string,</span><br><span class="line">	  addr: ReactTypes.string</span><br><span class="line">	&#125;</span><br><span class="line">	render()&#123;</span><br><span class="line">		<span class="keyword">return</span>(</span><br><span class="line">			&lt;div&gt;</span><br><span class="line">				&#123;<span class="keyword">this</span>.props.name&#125; ---- &#123;<span class="keyword">this</span>.props.addr&#125; <span class="comment">// 通过this.props.XXXX来使用</span></span><br><span class="line">			&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">		</span></span><br><span class="line"><span class="regexp">		)</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -135,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/React的props-state-ref三大属性详解/" data-id="cjxxc27je00030surc9809u17" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/React的props-state-ref三大属性详解/" data-id="cjy00cfj50001d0ur125ydzxq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,62 +213,55 @@
 </li>
 </ul>
 <ol>
-<li>组件创建阶段的生命周期函数<ul>
-<li>componentWillMount(){}<ul>
-<li>组件将要挂载的时候执行的函数，组件尚未挂载到页面中。</li>
-<li>虚拟DOM也没有开始创建。</li>
-<li>这个生命周期函数相当于 vue 中的 created(){}</li>
-</ul>
-</li>
-<li>render(){}<ul>
-<li>在 return 之前，虚拟DOM还没有开始创建，页面上也是空的，此时无法拿到页面中的元素。</li>
-<li>不要在 render 中使用 this.setState,这样做会导致会死循环。 </li>
-<li>当 return 执行完毕后， 虚拟DOM创建好了，但是，还没有挂载到真正的页面中</li>
-</ul>
-</li>
-<li>componentDidMount(){}<ul>
-<li>当组件挂载到页面上之后，会执行此生命周期函数。</li>
-<li>此时，我们可以操作页面中的DOM元素了，这是我们可以最早操作DOM元素的生命周期函数。</li>
-<li>当组件执行完 componentDidMount 函数后，就进入到了 运行中的状态，所以，componentDidMount 是创建阶段的最后一个函数</li>
-<li>此函数 相当于 Vue 中的 mounted 函数</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>组件运行阶段的生命周期函数<ul>
-<li>componentWillReceiveProps(nextProps, nextState){}<ul>
-<li>在次函数中必须返回一个布尔值，如果返回的值是 false，则不会继续执行后续的生命周期函数，组件直接退回到了运行中 的状态，后续的 render 函数并没有被调用，因此，页面不会被更新，但是,组件的state状态或者 props却被修改了；</li>
-<li>此时操作 state 或者 props中的属性，需要使用nextProps和 nextState，因为this.state和this.props存储的还是未更新的属性</li>
-</ul>
-</li>
-<li>shouldComponentUpdate(nextProps, nextState){}<ul>
-<li>组件将要更新，但是此时尚未更新，在进入这个生命周期函数的时候，内存中的虚拟DOM是旧的，页面上的 DOM 元素 也是旧的 </li>
-</ul>
-</li>
-<li>componentWillUpdate(nextProps, nextState){}<ul>
-<li>此时页面上的 DOM 节点，都是旧的，我们要应该慎重操作，因为此时操作的是旧DOM</li>
-</ul>
-</li>
-<li>render(){}</li>
-<li>componentDidUpdate(prevProps, prevState){}<ul>
-<li>组件已经完成更新，state 中的数据、虚拟DOM、页面上的DOM，都是最新的。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>组件销毁阶段的生命周期函数<ul>
-<li>compoentWillUnmount(){}<ul>
-<li>组建将要被卸载。此时，组建还是可用状态。 </li>
-</ul>
-</li>
-</ul>
-</li>
+<li>组件创建阶段的生命周期函数</li>
 </ol>
+<pre><code>componentWillMount(){}
+   - 组件将要挂载的时候执行的函数，组件尚未挂载到页面中。
+   - 虚拟DOM也没有开始创建。
+   - 这个生命周期函数相当于 vue 中的 created(){}
 
+
+render(){}
+   - 在 return 之前，虚拟DOM还没有开始创建，页面上也是空的，此时无法拿到页面中的元素。
+   - 不要在 render 中使用 this.setState,这样做会导致会死循环。 
+   - 当 return 执行完毕后， 虚拟DOM创建好了，但是，还没有挂载到真正的页面中
+
+
+componentDidMount(){}
+   - 当组件挂载到页面上之后，会执行此生命周期函数。
+   - 此时，我们可以操作页面中的DOM元素了，这是我们可以最早操作DOM元素的生命周期函数。
+   - 当组件执行完 componentDidMount 函数后，就进入到了 运行中的状态，所以，componentDidMount 是创建阶段的最后一个函数
+   - 此函数 相当于 Vue 中的 mounted 函数</code></pre><ol start="2">
+<li>组件运行阶段的生命周期函数</li>
+</ol>
+<pre><code>componentWillReceiveProps(nextProps, nextState){}
+   - 在次函数中必须返回一个布尔值，如果返回的值是 false，则不会继续执行后续的生命周期函数，
+       组件直接退回到了运行中 的状态，后续的 render 函数并没有被调用，因此，
+       页面不会被更新，但是,组件的state状态或者 props却被修改了；
+   - 此时操作 state 或者 props中的属性，需要使用nextProps和 nextState，因为this.state和this.props存储的还是未更新的属性
+
+
+shouldComponentUpdate(nextProps, nextState){}
+   - 组件将要更新，但是此时尚未更新，在进入这个生命周期函数的时候，内存中的虚拟DOM是旧的，页面上的 DOM 元素 也是旧的 
+
+
+componentWillUpdate(nextProps, nextState){}
+   - 此时页面上的 DOM 节点，都是旧的，我们要应该慎重操作，因为此时操作的是旧DOM
+
+
+render(){}
+
+
+componentDidUpdate(prevProps, prevState){}
+   - 组件已经完成更新，state 中的数据、虚拟DOM、页面上的DOM，都是最新的。</code></pre><ol start="3">
+<li>组件销毁阶段的生命周期函数</li>
+</ol>
+<pre><code>- compoentWillUnmount(){}
+    - 组建将要被卸载。此时，组建还是可用状态。 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/React的生命周期/" data-id="cjxxc27jb00010surgw4v9aes" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/React的生命周期/" data-id="cjy00cfk70008d0ur9gsa6lc8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/30/React基础学习/" data-id="cjxxc27j600000sur5t733c93" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/30/React基础学习/" data-id="cjy00cfj60002d0uri34dx6c9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/不适合入门的一篇博客，适合有一定基础的人阅读/">不适合入门的一篇博客，适合有一定基础的人阅读</a></li></ul>
@@ -470,7 +499,7 @@
 
 </li>
 </ol>
-<h2 id="使用webpaack处理css文件和高级js语法"><a href="#使用webpaack处理css文件和高级js语法" class="headerlink" title="使用webpaack处理css文件和高级js语法"></a>使用webpaack处理css文件和高级js语法</h2><p>webpack 处理第三方文件类型的过程:</p>
+<h2 id="使用webpack处理css文件和高级js语法"><a href="#使用webpack处理css文件和高级js语法" class="headerlink" title="使用webpack处理css文件和高级js语法"></a>使用webpack处理css文件和高级js语法</h2><p>webpack 处理第三方文件类型的过程:</p>
 <ol>
 <li>发现这个 要处理的文件不是JS文件，然后就去 配置文件中，查找有没有对应的第三方 loader 规则</li>
 <li>如果能找到对应的规则， 就会调用 对应的 loader 处理 这种文件类型；</li>
@@ -537,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/27/webpack-base-study/" data-id="cjxxc27jq00050surpeemxgk4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/27/webpack-base-study/" data-id="cjy00cfji0005d0urmt2493ta" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/张团结/">张团结</a></li></ul>
@@ -592,6 +621,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/07/12/React函数传参的三种方式/">&#39;React函数传参的三种方式&#39;</a>
+          </li>
         
           <li>
             <a href="/2019/07/10/React的props-state-ref三大属性详解/">React的props,state,ref三大属性详解</a>
