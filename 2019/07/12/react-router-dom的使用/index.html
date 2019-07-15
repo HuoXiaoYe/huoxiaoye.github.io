@@ -273,7 +273,7 @@
 </ul>
 <h3 id="React中使用路由"><a href="#React中使用路由" class="headerlink" title="React中使用路由"></a>React中使用路由</h3><ul>
 <li>第一步：安装包 <code>yarn add react-router-dom</code></li>
-<li>第二步：<code>import {HashRouter, Route, Link} from &#39;react-router-dom&#39;</code><ul>
+<li>第二步：<code>import {HashRouter, Route, Link, Switch} from &#39;react-router-dom&#39;</code><ul>
 <li>HashRouter 表示 路由的根容器，既所有的路由都需要在<hashrouter></hashrouter>中包裹 <strong>在一个网站中，HashRouter使用一次即可</strong> </li>
 <li>Route 表示一个路由规则， 在 Route 上，有两个比较重要的属性， path   component</li>
 <li>表示一个路由的链接 ，就好比 vue 中的 <code>&lt;router-link to=&quot;&quot;&gt;&lt;/router-link&gt;</code></li>
@@ -281,6 +281,9 @@
 </li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 示例</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入包</span></span><br><span class="line"><span class="keyword">import</span> &#123;HashRouter, route, Link&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span>; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
+
+<p>{/* 在匹配路由规则的时候，这里提供了两个参数 <em>/}<br>{/</em> 如果想要从 路由规则中，提取 参数，需要使用 this.props.match.params <em>/}<br>{/</em> /movie/detail/2158490 <em>/}<br>{/</em> 注意：哪怕为 路由启用了 exact 精确匹配模式，也会从上到下，把所有的 路由规则匹配一遍 <em>/}<br>{/</em> 使用 路由中的 Switch 组件，能够指定，如果前面的路由规则优先匹配到了，则放弃匹配后续的路由 */}</p>
+
                 
 
                 <hr>
