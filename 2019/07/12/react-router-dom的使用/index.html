@@ -247,7 +247,31 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="react-router-dom的使用"><a href="#react-router-dom的使用" class="headerlink" title="react-router-dom的使用"></a>react-router-dom的使用</h2>
+                <h2 id="react-router-dom的使用"><a href="#react-router-dom的使用" class="headerlink" title="react-router-dom的使用"></a>react-router-dom的使用</h2><h3 id="什么是路由"><a href="#什么是路由" class="headerlink" title="什么是路由"></a>什么是路由</h3><ul>
+<li>前端路由<ul>
+<li>定义：在单页面应用(SPA)中，大部分页面结构不变，只改变部分内容的使用</li>
+<li>优点：用户体验好，不需要每次都从服务器全部获取，快速展现给用户，页面切换速度快，可以设置页面切换时的动画</li>
+<li>缺点：<ul>
+<li>一开始加载时耗费时间 </li>
+<li>使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存</li>
+<li>单页面无法记住之前滚动的位置，无法在前进，后退的时候记住滚动的位置 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后端路由<ul>
+<li>定义：通过用户请求的url导航到具体的html页面；每跳转到不同的URL，都是重新访问服务端，然后服务端返回页面，页面也可以是服务端获取数据，然后和模板组合，返回HTML，也可以是直接返回模板HTML，然后由前端js再去请求数据，使用前端模板和数据进行组合，生成想要的HTML</li>
+</ul>
+<ul>
+<li>优点：首页加载时间快</li>
+<li>缺点<ul>
+<li>页面切换时间慢     </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
                 
 
                 <hr>
