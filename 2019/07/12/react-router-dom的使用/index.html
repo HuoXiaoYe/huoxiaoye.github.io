@@ -275,10 +275,12 @@
 <li>第一步：安装包 <code>yarn add react-router-dom</code></li>
 <li>第二步：<code>import {HashRouter, Route, Link} from &#39;react-router-dom&#39;</code><ul>
 <li>HashRouter 表示 路由的根容器，既所有的路由都需要在<hashrouter></hashrouter>中包裹 <strong>在一个网站中，HashRouter使用一次即可</strong> </li>
+<li>Route 表示一个路由规则， 在 Route 上，有两个比较重要的属性， path   component</li>
+<li>表示一个路由的链接 ，就好比 vue 中的 <code>&lt;router-link to=&quot;&quot;&gt;&lt;/router-link&gt;</code></li>
 </ul>
 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一步 安装 react-router-dom包，并导入</span></span><br><span class="line"><span class="keyword">import</span> &#123;HashRouter, route, Link&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span>; </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">HashRouter 表示 路由的根容器，既所有的路由都需要在&lt;HashRouter&gt;&lt;/HashRouter&gt;中包裹</span></span><br><span class="line"><span class="comment">注意： 在一个网站中，HashRouter使用一次即可</span></span><br><span class="line"><span class="comment">Route 表示一个路由规则， 在 Route 上，有两个比较重要的属性， path   component</span></span><br><span class="line"><span class="comment">Link 表示一个路由的链接 ，就好比 vue 中的 &lt;router-link to=""&gt;&lt;/router-link&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 示例</span></span><br><span class="line"><span class="keyword">import</span> &#123;HashRouter, route, Link&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span>; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
                 
 
                 <hr>
