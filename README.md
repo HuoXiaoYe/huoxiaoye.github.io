@@ -3,7 +3,7 @@
 > 欢迎来到霍小叶的个人博客(前端新人，不该保证自己的代码和知识点没有一点错误，但是我会尽我所能保证知识的准确性，谢谢)
 
 ## 博客主页面
-* [传送门~~~嗖嗖嗖](https://huoxiaoye.github.io/)
+* [传送门](https://huoxiaoye.github.io/)
 
 ### Webpack
 * [webpack的基本使用](https://huoxiaoye.github.io/2019/06/27/webpack-base-study/)
